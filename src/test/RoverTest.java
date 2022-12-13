@@ -13,9 +13,8 @@ public class RoverTest {
     @Test
     void canCreateRover() {
         // arrange
-        Rover rover = new Rover(2, 4, "N");
-
         // act
+        Rover rover = new Rover(2, 4, "N");
 
         // assert
         assertEquals("Rover{xCoordinate='2', yCoordinate='4', direction='N'}", rover.toString());

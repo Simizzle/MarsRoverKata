@@ -74,25 +74,25 @@ public class Rover implements LunarVehicle {
     @Override
     public String move(Rover rover, Plateau plateau) {
         if (rover.getDirection().equals("N")) {
-            if (rover.getyCoordinate() < plateau.getY()) {
+            if (rover.getyCoordinate() < plateau.y()) {
                 rover.setyCoordinate(rover.yCoordinate += 1);
             }
         }
         if (rover.getDirection().equals("E")) {
-            if (rover.getxCoordinate() < plateau.getX()) {
+            if (rover.getxCoordinate() < plateau.x()) {
                 rover.setxCoordinate(rover.xCoordinate += 1);
             }
         }
         if (rover.getDirection().equals("S")) {
-            if (rover.getyCoordinate() < plateau.getY()) {
+            if (rover.getyCoordinate() < plateau.y()) {
                 rover.setyCoordinate(rover.yCoordinate -= 1);
             }
         }
         if (rover.getDirection().equals("W")) {
-            if (rover.getxCoordinate() < plateau.getX()) {
+            if (rover.getxCoordinate() < plateau.x()) {
                 rover.setxCoordinate(rover.xCoordinate -= 1);
             }
-        } else if ((rover.getxCoordinate() == plateau.getX()) || rover.getyCoordinate() == plateau.getY()){
+        } else if ((rover.getxCoordinate() == plateau.x()) || rover.getyCoordinate() == plateau.y()){
             System.out.println("Unable to move rover past the plateau boundaries!!!");
         }
         return rover.toString();
